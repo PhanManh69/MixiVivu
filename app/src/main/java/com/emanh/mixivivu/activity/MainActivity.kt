@@ -6,7 +6,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.emanh.mixivivu.R
 import com.emanh.mixivivu.databinding.ActivityMainBinding
-import com.emanh.mixivivu.databinding.ButtonBarItemBinding
+import com.emanh.mixivivu.databinding.EditButtonBarItemBinding
 import com.emanh.mixivivu.fragment.BlogFragment
 import com.emanh.mixivivu.fragment.EnterpriseFragment
 import com.emanh.mixivivu.fragment.PlaneFragment
@@ -52,7 +52,7 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    private fun setupButtonBarItem(itemBinding: ButtonBarItemBinding, iconRes: Int, text: String, selectedPosition: Int) {
+    private fun setupButtonBarItem(itemBinding: EditButtonBarItemBinding, iconRes: Int, text: String, selectedPosition: Int) {
         val position = when (itemBinding) {
             binding.buttonShip -> 0
             binding.buttonPlane -> 1
@@ -77,7 +77,7 @@ class MainActivity : BaseActivity() {
     }
 
     private data class ButtonBarItem(
-        val binding: ButtonBarItemBinding,
+        val binding: EditButtonBarItemBinding,
         val iconRes: Int,
         val text: String,
         val position: Int

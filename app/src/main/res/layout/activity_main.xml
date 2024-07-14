@@ -19,7 +19,7 @@
         android:layout_height="75dp"
         android:layout_gravity="bottom"
         android:layout_margin="16dp"
-        android:background="@drawable/bg_light_blue"
+        android:background="@drawable/bg_light_blue1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
@@ -32,19 +32,19 @@
 
                 <include
                     android:id="@+id/buttonShip"
-                    layout="@layout/button_bar_item" />
+                    layout="@layout/edit_button_bar_item" />
 
                 <include
                     android:id="@+id/buttonPlane"
-                    layout="@layout/button_bar_item" />
+                    layout="@layout/edit_button_bar_item" />
 
                 <include
                     android:id="@+id/buttonBlog"
-                    layout="@layout/button_bar_item" />
+                    layout="@layout/edit_button_bar_item" />
 
                 <include
                     android:id="@+id/buttonEnterprise"
-                    layout="@layout/button_bar_item" />
+                    layout="@layout/edit_button_bar_item" />
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
