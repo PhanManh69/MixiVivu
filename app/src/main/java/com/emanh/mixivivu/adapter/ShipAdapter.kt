@@ -2,12 +2,14 @@ package com.emanh.mixivivu.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions
+import com.emanh.mixivivu.activity.DetailShipActivity
 import com.emanh.mixivivu.databinding.ViewholderShipBinding
 import com.emanh.mixivivu.model.ShipModel
 
@@ -32,10 +34,16 @@ class ShipAdapter(private val items: MutableList<ShipModel>)
             .apply(RequestOptions().transform(CenterCrop()))
             .into(holder.binding.picUrl)
 
-        holder.binding.title.text = "Du thuyền " + items[position].title
+        holder.binding.title.text = "Du thuyền ${items[position].title}"
         holder.binding.location.text = items[position].location
-        holder.binding.price.text = items[position].price.toString() + "đ / khách"
+        holder.binding.price.text = "${items[position].price}đ / khách"
         holder.binding.textEvaluate.text = items[position].evaluate.calculateAverageRating().toString() + " (${items[position].evaluate.countReview()}) " + "đánh giá"
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, DetailShipActivity::class.java)
+            intent.putExtra("object", items[position])
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = items.size

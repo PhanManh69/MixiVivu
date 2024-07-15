@@ -4,6 +4,11 @@
     <string name="textShipTour">Hơn 100 tour du thuyền đang chờ bạn</string>
     <string name="search">Tìm kiếm</string>
     <string name="inputShip">Nhập tên du thuyền</string>
+    <string name="info_ship">Thông tin du thuyền</string>
+    <string name="characteristic">Đặc điểm</string>
+    <string name="price_room">Giá phòng</string>
+    <string name="intro">Giới thiệu</string>
+    <string name="evaluation">Đánh giá</string>
     <string-array name="filterDestination">
         <item>Tất cả địa điểm</item>
         <item>Vịnh Hạ Long</item>

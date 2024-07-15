@@ -6,8 +6,8 @@
     style="@style/buttonBarItem_LinearLayout">
 
     <ImageView
-        android:id="@+id/icon"
         style="@style/buttonBarItem_ImageView"
+        android:id="@+id/icon"
         tools:ignore="ContentDescription" />
 
     <TextView

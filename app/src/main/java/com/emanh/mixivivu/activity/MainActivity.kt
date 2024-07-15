@@ -11,6 +11,7 @@ import com.emanh.mixivivu.fragment.BlogFragment
 import com.emanh.mixivivu.fragment.EnterpriseFragment
 import com.emanh.mixivivu.fragment.PlaneFragment
 import com.emanh.mixivivu.fragment.ShipFragment
+import com.emanh.mixivivu.model.ButtonBarItemModel
 
 class MainActivity : BaseActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -25,10 +26,10 @@ class MainActivity : BaseActivity() {
 
     private fun initButtonMenuBar() {
         val buttonBarItems = listOf(
-            ButtonBarItem(binding.buttonShip, R.drawable.ship, "Du Thuyền", 0),
-            ButtonBarItem(binding.buttonPlane, R.drawable.plane, "Vé máy bay", 1),
-            ButtonBarItem(binding.buttonBlog, R.drawable.blog, "Blog", 2),
-            ButtonBarItem(binding.buttonEnterprise, R.drawable.enterprise, "Giới thiệu", 3)
+            ButtonBarItemModel(binding.buttonShip, R.drawable.ship, "Du Thuyền", 0),
+            ButtonBarItemModel(binding.buttonPlane, R.drawable.plane, "Vé máy bay", 1),
+            ButtonBarItemModel(binding.buttonBlog, R.drawable.blog, "Blog", 2),
+            ButtonBarItemModel(binding.buttonEnterprise, R.drawable.enterprise, "Giới thiệu", 3)
         )
 
         var selectedPosition = 0
@@ -75,13 +76,6 @@ class MainActivity : BaseActivity() {
             indicator.visibility = if (isSelected) View.VISIBLE else View.INVISIBLE
         }
     }
-
-    private data class ButtonBarItem(
-        val binding: EditButtonBarItemBinding,
-        val iconRes: Int,
-        val text: String,
-        val position: Int
-    )
 
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
