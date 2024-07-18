@@ -40,7 +40,7 @@ class IntroFragment : Fragment() {
     private fun initIntro() {
         ship = requireActivity().intent.getParcelableExtra("objectShip")!!
         shipViewModel = ViewModelProvider(this)[ShipViewModel::class.java]
-        shipViewModel.loadShip()
+        shipViewModel.loadShip("", "", Int.MIN_VALUE, Int.MAX_VALUE)
 
         binding.progressIntro.visibility = View.VISIBLE
         shipViewModel.ship.observe(viewLifecycleOwner) {

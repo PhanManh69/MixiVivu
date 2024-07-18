@@ -17,14 +17,20 @@ class ShipViewModel : ViewModel() {
 
     val ship: LiveData<MutableList<ShipModel>> = _ship
 
-    fun loadShip() {
+    fun loadShip(inputShip: String, location: String, minPrice: Int, maxPrice: Int) {
         val ref = firebaseDatabase.getReference("Ship")
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val lists = mutableListOf<ShipModel>()
                 for (childSnapshot in snapshot.children) {
                     val ship = childSnapshot.getValue(ShipModel::class.java)
-                    ship?.let { lists.add(it) }
+                    ship?.let {
+                        if (it.title.contains(inputShip, ignoreCase = true) &&
+                            it.location.contains(location, ignoreCase = true) &&
+                            it.price in minPrice..maxPrice) {
+                            lists.add(it)
+                        }
+                    }
                 }
                 _ship.value = lists
             }

@@ -41,7 +41,7 @@ class CharacteristicFragment : Fragment() {
     private fun initListHighlights() {
         ship = requireActivity().intent.getParcelableExtra("objectShip")!!
         shipViewModel = ViewModelProvider(this)[ShipViewModel::class.java]
-        shipViewModel.loadShip()
+        shipViewModel.loadShip("", "", Int.MIN_VALUE, Int.MAX_VALUE)
 
         val listHighlights =  ArrayList<String>()
         for (highlight in ship.characteristic) {

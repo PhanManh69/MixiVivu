@@ -29,7 +29,8 @@ class ShipFragment : Fragment() {
 
         initVideoIntro()
         initInputSpinner()
-        initShip()
+        initShip("", "", Int.MIN_VALUE, Int.MAX_VALUE)
+        initSearch()
 
         return binding.root
     }
@@ -65,15 +66,54 @@ class ShipFragment : Fragment() {
         }
     }
 
-    private fun initShip() {
+    private fun initShip(inputShip: String, location: String, minPrice: Int, maxPrice: Int) {
+        viewModel.loadShip(inputShip, location, minPrice, maxPrice)
+
         binding.progressShip.visibility = View.VISIBLE
         viewModel.ship.observe(viewLifecycleOwner) {
-            binding.listShip.layoutManager = LinearLayoutManager(requireContext())
-            binding.listShip.adapter = ShipAdapter(it)
+            if (it.isNullOrEmpty()) {
+                binding.noData.visibility = View.VISIBLE
+                binding.listShip.visibility = View.GONE
+            } else {
+                binding.noData.visibility = View.GONE
+                binding.listShip.visibility = View.VISIBLE
+
+                binding.listShip.layoutManager = LinearLayoutManager(requireContext())
+                binding.listShip.adapter = ShipAdapter(it)
+            }
             binding.progressShip.visibility = View.GONE
         }
+    }
 
-        viewModel.loadShip()
+    private fun initSearch() {
+        binding.searchShip.setOnClickListener {
+            var minPrice = 0
+            var maxPrice = 0
+
+            var selectedDestination = (binding.filterDestination.label as? AutoCompleteTextView)?.text.toString()
+            if (selectedDestination == "Tất cả địa điểm") selectedDestination = ""
+
+            when ((binding.filterPrice.label as? AutoCompleteTextView)?.text.toString()) {
+                "Tất cả mức giá" -> {
+                    minPrice = Int.MIN_VALUE
+                    maxPrice = Int.MAX_VALUE
+                }
+                "Từ 1tr đến 3tr" -> {
+                    minPrice = 1000000
+                    maxPrice = 3000000
+                }
+                "Từ 3tr đến 6tr" -> {
+                    minPrice = 3000000
+                    maxPrice = 6000000
+                }
+                "Trên 6tr" -> {
+                    minPrice = 6000000
+                    maxPrice = Int.MAX_VALUE
+                }
+            }
+
+            initShip(binding.inputShip.text.toString(), selectedDestination, minPrice, maxPrice)
+        }
     }
 
     private fun setupInputSpinner(item: InputSpinnerItem) {
