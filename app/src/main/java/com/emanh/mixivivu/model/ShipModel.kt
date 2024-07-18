@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package com.emanh.mixivivu.model
 
 import android.os.Parcel
@@ -16,7 +14,7 @@ data class ShipModel(
     var typeRoomPrice: ArrayList<TypeRoomModel> = ArrayList(),
     var introduceText: ArrayList<String> = ArrayList(),
     var introducePicUrl: ArrayList<String> = ArrayList(),
-    var evaluate: EvaluateModel = EvaluateModel()
+    var evaluate: ArrayList<ReviewsModel> = ArrayList()
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
@@ -29,7 +27,7 @@ data class ShipModel(
         parcel.createTypedArrayList(TypeRoomModel.CREATOR) as ArrayList<TypeRoomModel>,
         parcel.createStringArrayList() as ArrayList<String>,
         parcel.createStringArrayList() as ArrayList<String>,
-        parcel.readParcelable(EvaluateModel::class.java.classLoader)!!
+        parcel.createTypedArrayList(ReviewsModel.CREATOR) as ArrayList<ReviewsModel>
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -43,7 +41,7 @@ data class ShipModel(
         parcel.writeTypedList(typeRoomPrice)
         parcel.writeStringList(introduceText)
         parcel.writeStringList(introducePicUrl)
-        parcel.writeParcelable(evaluate, flags)
+        parcel.writeTypedList(evaluate)
     }
 
     override fun describeContents(): Int {

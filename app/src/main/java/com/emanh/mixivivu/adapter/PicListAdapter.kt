@@ -10,23 +10,23 @@ import com.bumptech.glide.Glide
 import com.emanh.mixivivu.R
 import com.emanh.mixivivu.databinding.ViewholderPicListBinding
 
-class PicListAdapter(private val items: MutableList<String>, private var picMain: ImageView) : RecyclerView.Adapter<PicListAdapter.ViewHolder>() {
+class PicListAdapter(private val items: MutableList<String>, private var picMain: ImageView)
+    : RecyclerView.Adapter<PicListAdapter.ViewHolder>() {
+
     private var selectedPosition = -1
     private var lastSelectedPosition = -1
     private lateinit var context: Context
 
-    inner class ViewHolder(val binding: ViewholderPicListBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(val binding: ViewholderPicListBinding) : RecyclerView.ViewHolder(binding.root)
 
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PicListAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         context = parent.context
         val binding = ViewholderPicListBinding.inflate(LayoutInflater.from(context), parent, false)
 
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: PicListAdapter.ViewHolder, @SuppressLint("RecyclerView") position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
         Glide.with(holder.itemView.context)
             .load(items[position])
             .into(holder.binding.imageList)

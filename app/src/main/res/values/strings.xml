@@ -21,4 +21,18 @@
         <item>Từ 3tr đến 6tr</item>
         <item>Trên 6tr</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="highlights">Đặc điểm nổi bật</string>
+    <string name="intro_ship">Giới thiệu về du thuyền</string>
+    <string name="room_and_price"><![CDATA[Các loại phòng & giá]]></string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="input_your_name">Nhập họ và tên</string>
+    <string name="input_your_review">Nhập đánh giá của bạn</string>
+    <string name="send_reviews">Gửi đánh giá</string>
+    <string name="text_view_review_service">Đánh giá của bạn về chất lượng dịch vụ</string>
+    <string name="text_view_reviews_user">Những đánh giá của khách hàng khác</string>
+    <string name="rating">Chất lượng:</string>
+    <string name="zero">00</string>
 </resources>

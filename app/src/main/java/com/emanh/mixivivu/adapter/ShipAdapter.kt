@@ -20,7 +20,7 @@ class ShipAdapter(private val items: MutableList<ShipModel>)
 
     class ViewHolder (val binding: ViewholderShipBinding) : RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShipAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         context = parent.context
         val binding = ViewholderShipBinding.inflate(LayoutInflater.from(context), parent, false)
 
@@ -28,7 +28,16 @@ class ShipAdapter(private val items: MutableList<ShipModel>)
     }
 
     @SuppressLint("SetTextI18n")
-    override fun onBindViewHolder(holder: ShipAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val countReview = items[position].evaluate.size
+        var sumRating = 0
+        for (index in 0..<countReview) {
+            sumRating += items[position].evaluate[index].rating
+        }
+
+        val rating = if (countReview > 0) sumRating.toFloat() / countReview else 0.0f
+        val formattedRating = String.format("%.1f", rating)
+
         Glide.with(holder.itemView.context)
             .load(items[position].picUrl[0])
             .apply(RequestOptions().transform(CenterCrop()))
@@ -37,11 +46,11 @@ class ShipAdapter(private val items: MutableList<ShipModel>)
         holder.binding.title.text = "Du thuyền ${items[position].title}"
         holder.binding.location.text = items[position].location
         holder.binding.price.text = "${items[position].price}đ / khách"
-        holder.binding.textEvaluate.text = items[position].evaluate.calculateAverageRating().toString() + " (${items[position].evaluate.countReview()}) " + "đánh giá"
+        holder.binding.textEvaluate.text = "$formattedRating (${countReview} đánh giá)"
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, DetailShipActivity::class.java)
-            intent.putExtra("object", items[position])
+            intent.putExtra("objectShip", items[position])
             holder.itemView.context.startActivity(intent)
         }
     }

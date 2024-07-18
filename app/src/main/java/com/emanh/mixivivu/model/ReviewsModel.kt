@@ -3,19 +3,22 @@ package com.emanh.mixivivu.model
 import android.os.Parcel
 import android.os.Parcelable
 
-data class ReviewModel(
-    val name: String,
-    val content: String,
-    val date: String
+data class ReviewsModel(
+    val name: String = "",
+    val rating: Int = 0,
+    val content: String = "",
+    val date: String = ""
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString().toString(),
+        parcel.readInt(),
         parcel.readString().toString(),
         parcel.readString().toString()
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)
+        parcel.writeInt(rating)
         parcel.writeString(content)
         parcel.writeString(date)
     }
@@ -24,12 +27,12 @@ data class ReviewModel(
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<ReviewModel> {
-        override fun createFromParcel(parcel: Parcel): ReviewModel {
-            return ReviewModel(parcel)
+    companion object CREATOR : Parcelable.Creator<ReviewsModel> {
+        override fun createFromParcel(parcel: Parcel): ReviewsModel {
+            return ReviewsModel(parcel)
         }
 
-        override fun newArray(size: Int): Array<ReviewModel?> {
+        override fun newArray(size: Int): Array<ReviewsModel?> {
             return arrayOfNulls(size)
         }
     }
