@@ -12,6 +12,8 @@ import com.bumptech.glide.request.RequestOptions
 import com.emanh.mixivivu.activity.DetailShipActivity
 import com.emanh.mixivivu.databinding.ViewholderShipBinding
 import com.emanh.mixivivu.model.ShipModel
+import java.text.NumberFormat
+import java.util.Locale
 
 class ShipAdapter(private val items: MutableList<ShipModel>)
     : RecyclerView.Adapter<ShipAdapter.ViewHolder>() {
@@ -45,7 +47,7 @@ class ShipAdapter(private val items: MutableList<ShipModel>)
 
         holder.binding.title.text = "Du thuyền ${items[position].title}"
         holder.binding.location.text = items[position].location
-        holder.binding.price.text = "${items[position].price}đ / khách"
+        holder.binding.price.text = "${formatPrice(items[position].price)}đ / khách"
         holder.binding.textEvaluate.text = "$formattedRating (${countReview} đánh giá)"
 
         holder.itemView.setOnClickListener {
@@ -56,4 +58,9 @@ class ShipAdapter(private val items: MutableList<ShipModel>)
     }
 
     override fun getItemCount(): Int = items.size
+
+    private fun formatPrice(price: Int): String {
+        val numberFormat = NumberFormat.getNumberInstance(Locale.US)
+        return numberFormat.format(price)
+    }
 }

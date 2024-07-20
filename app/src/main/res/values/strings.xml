@@ -35,4 +35,7 @@
     <string name="text_view_reviews_user">Những đánh giá của khách hàng khác</string>
     <string name="rating">Chất lượng:</string>
     <string name="zero">00</string>
+    <string name="sum_price">Tổng tiền</string>
+    <string name="order">Đặt ngay</string>
+    <string name="select_room">Chọn phòng</string>
 </resources>

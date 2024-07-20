@@ -59,5 +59,36 @@
                 app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textViewContent"
+                    android:text="@string/sum_price"/>
+
+                <TextView
+                    style="@style/textViewTitle"
+                    android:id="@+id/sumPrice"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/buttonLightBlue"
+                android:id="@+id/orderShip"
+                android:layout_marginStart="150dp"
+                android:text="@string/order"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>

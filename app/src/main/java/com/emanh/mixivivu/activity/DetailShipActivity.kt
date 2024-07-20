@@ -20,12 +20,13 @@ import com.emanh.mixivivu.fragment.PriceRoomFragment
 import com.emanh.mixivivu.model.InfoShipModel
 import com.emanh.mixivivu.model.ShipModel
 import com.emanh.mixivivu.viewModel.ReviewsViewModel
+import java.text.NumberFormat
+import java.util.Locale
 
 class DetailShipActivity : BaseActivity() {
     private lateinit var binding: ActivityDetailShipBinding
     private lateinit var ship: ShipModel
     private lateinit var reviewsViewModel: ReviewsViewModel
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,24 +64,6 @@ class DetailShipActivity : BaseActivity() {
         }
     }
 
-    private fun updateButtonBackgrounds(selectedButton: View) {
-        val buttons = listOf(
-            binding.characteristic,
-            binding.priceRoom,
-            binding.intro,
-            binding.evaluation
-        )
-
-        buttons.forEach { button ->
-            val backgroundRes = if (button == selectedButton) {
-                R.drawable.bg_button_list1
-            } else {
-                R.drawable.bg_button_list2
-            }
-            button.setBackgroundResource(backgroundRes)
-        }
-    }
-
     private fun initListPic() {
         val colorList =  ArrayList<String>()
 
@@ -99,7 +82,7 @@ class DetailShipActivity : BaseActivity() {
     @SuppressLint("SetTextI18n")
     private fun initDetailShip() {
         binding.title.text = "Du thuyền ${ship.title}"
-        binding.price.text = "${ship.price}đ/ khách"
+        binding.price.text = "${formatPrice(ship.price)}đ/ khách"
 
         val infoShipItem = listOf(
             InfoShipModel(binding.launching, R.drawable.anchor, "Hạ thủy", 0),
@@ -111,6 +94,24 @@ class DetailShipActivity : BaseActivity() {
 
         infoShipItem.forEachIndexed { _, item ->
             setupInfoShip(item.binding, item.iconRes, item.title, item.label)
+        }
+    }
+
+    private fun updateButtonBackgrounds(selectedButton: View) {
+        val buttons = listOf(
+            binding.characteristic,
+            binding.priceRoom,
+            binding.intro,
+            binding.evaluation
+        )
+
+        buttons.forEach { button ->
+            val backgroundRes = if (button == selectedButton) {
+                R.drawable.bg_button_list1
+            } else {
+                R.drawable.bg_button_list2
+            }
+            button.setBackgroundResource(backgroundRes)
         }
     }
 
@@ -134,5 +135,10 @@ class DetailShipActivity : BaseActivity() {
     private fun updateReviewInfo(summary: ReviewsViewModel.ReviewsSummary) {
         val formattedRating = String.format("%.1f", summary.averageRating)
         binding.infoEvaluate.text = "$formattedRating (${summary.count} đánh giá)"
+    }
+
+    private fun formatPrice(price: Int): String {
+        val numberFormat = NumberFormat.getNumberInstance(Locale.US)
+        return numberFormat.format(price)
     }
 }
