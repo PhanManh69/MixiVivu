@@ -73,31 +73,37 @@ class OrderShipActivity : BaseActivity() {
             "Vui lòng cung cấp họ và tên của bạn".toast()
             return false
         }
+
         if (numberPhone.isEmpty()) {
             binding.inputNumberPhone.error = "Số điện thoại không được để trống"
             "Vui lòng cung cấp số điện thoại của bạn".toast()
             return false
         }
+
         if (!numberPhone.matches(Regex("^\\d{10}\$"))) {
             binding.inputNumberPhone.error = "Số điện thoại không hợp lệ"
             "Vui lòng cung cấp một số điện thoại hợp lệ".toast()
             return false
         }
+
         if (email.isEmpty()) {
             binding.inputYourEmail.error = "Email không được để trống"
             "Vui lòng cung cấp email của bạn".toast()
             return false
         }
+
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             binding.inputYourEmail.error = "Định dạng email không hợp lệ"
             "Vui lòng cung cấp một email hợp lệ".toast()
             return false
         }
+
         if (dateStr.isEmpty()) {
             binding.inputDate.error = "Ngày nhận phòng không được để trống"
             "Vui lòng cung cấp ngày nhận phòng của bạn".toast()
             return false
         }
+
         val selectedDate = dateFormat.parse(dateStr)
         if (selectedDate != null) {
             if (selectedDate.before(currentDate)) {
@@ -106,6 +112,7 @@ class OrderShipActivity : BaseActivity() {
                 return false
             }
         }
+
         return true
     }
 
