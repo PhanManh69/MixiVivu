@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "828303771470",
-    "project_id": "mixivivu-fec02",
-    "storage_bucket": "mixivivu-fec02.appspot.com"
+    "project_number": "814961744836",
+    "project_id": "mixivivu-5f875",
+    "storage_bucket": "mixivivu-5f875.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:828303771470:android:088068f66202f4f1bd801f",
+        "mobilesdk_app_id": "1:814961744836:android:1b2a438ccee2674f14e291",
         "android_client_info": {
           "package_name": "com.emanh.mixivivu"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCC1rkVcvpBbf3t6yX4xQZXfJEapOxqasI"
+          "current_key": "AIzaSyAfeR9yDnNBaOoylhpZ9w4e_WPLaMhGYvE"
         }
       ],
       "services": {

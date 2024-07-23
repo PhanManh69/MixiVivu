@@ -1,3 +1,49 @@
 <resources>
     <string name="app_name">MixiVivu</string>
+    <string name="textShipIntro">Bạn lựa chọn du thuyền nào đi Hạ Long</string>
+    <string name="textShipTour">Hơn 100 tour du thuyền đang chờ bạn</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="inputShip">Nhập tên du thuyền</string>
+    <string name="info_ship">Thông tin du thuyền</string>
+    <string name="characteristic">Đặc điểm</string>
+    <string name="price_room">Giá phòng</string>
+    <string name="intro">Giới thiệu</string>
+    <string name="evaluation">Đánh giá</string>
+    <string-array name="filterDestination">
+        <item>Tất cả địa điểm</item>
+        <item>Vịnh Hạ Long</item>
+        <item>Vịnh Lan Hạ</item>
+        <item>Đảo Cát Bà</item>
+    </string-array>
+    <string-array name="filterPrice">
+        <item>Tất cả mức giá</item>
+        <item>Từ 1tr đến 3tr</item>
+        <item>Từ 3tr đến 6tr</item>
+        <item>Trên 6tr</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="highlights">Đặc điểm nổi bật</string>
+    <string name="intro_ship">Giới thiệu về du thuyền</string>
+    <string name="room_and_price"><![CDATA[Các loại phòng & giá]]></string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="input_your_name">Nhập họ và tên</string>
+    <string name="input_your_review">Nhập đánh giá của bạn</string>
+    <string name="send_reviews">Gửi đánh giá</string>
+    <string name="text_view_review_service">Đánh giá của bạn về chất lượng dịch vụ</string>
+    <string name="text_view_reviews_user">Những đánh giá của khách hàng khác</string>
+    <string name="rating">Chất lượng:</string>
+    <string name="zero">00</string>
+    <string name="sum_price">Tổng tiền</string>
+    <string name="order">Đặt ngay</string>
+    <string name="select_room">Chọn phòng</string>
+    <string name="order_ship">Đặt du thuyền</string>
+    <string name="input_number_phone">Nhập số điện thoại</string>
+    <string name="input_email">Nhập địa chỉ email</string>
+    <string name="input_date">Ngày nhập phòng</string>
+    <string name="input_your_request">Nhập yêu cầu của bạn</string>
+    <string name="content_confirm">Xác nhận đặt phòng của bạn, chúng tôi sẽ sớm liên hệ với bạn.</string>
+    <string name="confirm_booking">Xác nhận đặt phòng</string>
+    <string name="complete_booking">Hoàn tất đặt phòng</string>
 </resources>
