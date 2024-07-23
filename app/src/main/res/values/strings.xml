@@ -21,8 +21,6 @@
         <item>Từ 3tr đến 6tr</item>
         <item>Trên 6tr</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="highlights">Đặc điểm nổi bật</string>
     <string name="intro_ship">Giới thiệu về du thuyền</string>
     <string name="room_and_price"><![CDATA[Các loại phòng & giá]]></string>
@@ -46,4 +44,102 @@
     <string name="content_confirm">Xác nhận đặt phòng của bạn, chúng tôi sẽ sớm liên hệ với bạn.</string>
     <string name="confirm_booking">Xác nhận đặt phòng</string>
     <string name="complete_booking">Hoàn tất đặt phòng</string>
+    <string name="no_ship">Không có du thuyền nào</string>
+    <string name="into_plane">Mở cánh cửa khám phá cùng Mixivivu</string>
+    <string name="intro_plane1">Mixivivu - Đặt chân lên đỉnh mây với một bước nhảy</string>
+    <string name="one_way">Một chiều</string>
+    <string name="round_trip">Khứ hồi</string>
+    <string name="destination">Điểm đến</string>
+    <string name="starting_point">Điểm đi</string>
+    <string name="date_go">Ngày đi</string>
+    <string name="adult">Người lớn</string>
+    <string name="children">Trẻ em</string>
+    <string name="baby">Em bé</string>
+    <string name="search_plane">Tìm chuyến bay</string>
+    <string name="no_plane">Không có chuyến bay nào</string>
+    <string-array name="filterCity">
+        <item>Bà Rịa</item>
+        <item>Bạc Liêu</item>
+        <item>Bảo Lộc</item>
+        <item>Bắc Giang</item>
+        <item>Bắc Kạn</item>
+        <item>Bắc Ninh</item>
+        <item>Bến Tre</item>
+        <item>Biên Hòa</item>
+        <item>Buôn Ma Thuột</item>
+        <item>Cà Mau</item>
+        <item>Cam Ranh</item>
+        <item>Cần Thơ</item>
+        <item>Cao Bằng</item>
+        <item>Cao Lãnh</item>
+        <item>Cẩm Phả</item>
+        <item>Châu Đốc</item>
+        <item>Đà Nẵng</item>
+        <item>Đà Lạt</item>
+        <item>Điện Biên Phủ</item>
+        <item>Đông Hà</item>
+        <item>Đồng Hới</item>
+        <item>Đồng Xoài</item>
+        <item>Hà Giang</item>
+        <item>Hạ Long</item>
+        <item>Hà Nội</item>
+        <item>Hà Tiên</item>
+        <item>Hà Tĩnh</item>
+        <item>Hải Dương</item>
+        <item>Hải Phòng</item>
+        <item>Hòa Bình</item>
+        <item>Hội An</item>
+        <item>Huế</item>
+        <item>Hưng Yên</item>
+        <item>Kon Tum</item>
+        <item>Lai Châu</item>
+        <item>Lạng Sơn</item>
+        <item>Lào Cai</item>
+        <item>Long Xuyên</item>
+        <item>Móng Cái</item>
+        <item>Mỹ Tho</item>
+        <item>Nam Định</item>
+        <item>Nha Trang</item>
+        <item>Ninh Bình</item>
+        <item>Phan Rang - Tháp Chàm</item>
+        <item>Phan Thiết</item>
+        <item>Phủ Lý</item>
+        <item>Phúc Yên</item>
+        <item>Pleiku</item>
+        <item>Quảng Ngãi</item>
+        <item>Quy Nhơn</item>
+        <item>Rạch Giá</item>
+        <item>Sa Đéc</item>
+        <item>Sầm Sơn</item>
+        <item>Sóc Trăng</item>
+        <item>Sơn La</item>
+        <item>Sông Công</item>
+        <item>Tam Điệp</item>
+        <item>Tam Kỳ</item>
+        <item>Tân An</item>
+        <item>Tây Ninh</item>
+        <item>Thái Bình</item>
+        <item>Thái Nguyên</item>
+        <item>Thanh Hóa</item>
+        <item>Thủ Dầu Một</item>
+        <item>Trà Vinh</item>
+        <item>Tuy Hòa</item>
+        <item>Tuyên Quang</item>
+        <item>TP. Hồ Chí Minh</item>
+        <item>Uông Bí</item>
+        <item>Vị Thanh</item>
+        <item>Việt Trì</item>
+        <item>Vinh</item>
+        <item>Vĩnh Long</item>
+        <item>Vĩnh Yên</item>
+        <item>Vũng Tàu</item>
+        <item>Yên Bái</item>
+        <item>Thuận An</item>
+        <item>Dĩ An</item>
+        <item>Phú Quốc</item>
+        <item>Ngã Bảy</item>
+        <item>Long Khánh</item>
+        <item>Hồng Ngự</item>
+        <item>Gia Nghĩa</item>
+    </string-array>
 </resources>

@@ -60,7 +60,7 @@
                     android:id="@+id/noData"
                     android:layout_marginTop="25dp"
                     android:layout_marginBottom="25dp"
-                    android:text="Không có du thuyền nào"
+                    android:text="@string/no_ship"
                     android:textColor="@color/red"
                     android:visibility="invisible"
                     app:layout_constraintStart_toStartOf="parent"
