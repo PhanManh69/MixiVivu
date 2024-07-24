@@ -203,5 +203,4 @@
             android:text="@string/intro_plane1"/>
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

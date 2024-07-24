@@ -57,6 +57,8 @@
     <string name="baby">Em bé</string>
     <string name="search_plane">Tìm chuyến bay</string>
     <string name="no_plane">Không có chuyến bay nào</string>
+    <string name="intro_blog">Hạ Long: Khám phá Sự đặc sắc và Cập nhật tin tức mới nhất</string>
+    <string name="intro_content_blog">Hạ Long: Bí mật và Cuộc sống trong Vịnh - Khám phá và Cập nhật những tin tức hấp dẫn từ điểm đến tuyệt vời này.</string>
     <string-array name="filterCity">
         <item>Bà Rịa</item>
         <item>Bạc Liêu</item>

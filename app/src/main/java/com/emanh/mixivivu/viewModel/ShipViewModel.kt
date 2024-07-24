@@ -18,7 +18,7 @@ class ShipViewModel : ViewModel() {
     val ship: LiveData<MutableList<ShipModel>> = _ship
 
     fun loadShip(inputShip: String, location: String, minPrice: Int, maxPrice: Int) {
-        val ref = firebaseDatabase.getReference("Ship")
+        val ref = firebaseDatabase.getReference("ship")
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val lists = mutableListOf<ShipModel>()

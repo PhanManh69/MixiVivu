@@ -26,7 +26,7 @@ class ReviewsViewModel : ViewModel() {
     val reviewsSummary: LiveData<ReviewsSummary> get() = _reviewsSummary
 
     fun loadReviews(shipId: String) {
-        val ref = firebaseDatabase.getReference("Ship/$shipId/evaluate")
+        val ref = firebaseDatabase.getReference("ship/$shipId/evaluate")
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val lists = mutableListOf<ReviewsModel>()
