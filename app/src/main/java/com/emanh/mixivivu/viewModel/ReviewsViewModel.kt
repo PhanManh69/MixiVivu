@@ -46,7 +46,7 @@ class ReviewsViewModel : ViewModel() {
     }
 
     fun addReviews(shipId: String, review: ReviewsModel) {
-        val ref = firebaseDatabase.getReference("Ship/$shipId/evaluate")
+        val ref = firebaseDatabase.getReference("ship/$shipId/evaluate")
         ref.get().addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 val snapshot = task.result
