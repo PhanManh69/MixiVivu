@@ -59,6 +59,14 @@
     <string name="no_plane">Không có chuyến bay nào</string>
     <string name="intro_blog">Hạ Long: Khám phá Sự đặc sắc và Cập nhật tin tức mới nhất</string>
     <string name="intro_content_blog">Hạ Long: Bí mật và Cuộc sống trong Vịnh - Khám phá và Cập nhật những tin tức hấp dẫn từ điểm đến tuyệt vời này.</string>
+    <string name="enterprise_title">Mixivivu - Tour Du thuyền Hạ Long: Kết nối doanh nghiệp, khám phá vẻ đẹp tự nhiên</string>
+    <string name="enterprise_intro">Với sự trải nghiệm thực tế, Công ty TNHH Du lịch và Dịch vụ MixiVivu mong muốn đưa du thuyền Hạ Long trở thành một lựa chọn đầu tiên cho doanh nghiệp. Nhiều chương trình du lịch hấp dẫn, đa dạng được kết hợp sẽ đem đến cho quý doanh nghiệp sự hài lòng và thuận tiện. Du thuyền Hạ Long cũng sẽ là một món quà tri ân vô cùng ý nghĩa dành cho nhân viên của quý doanh nghiệp. Bên cạnh đó, du thuyền Hạ Long còn rất phù hợp cho những cuộc hội thảo, hợp tác đầu tư hay giao lưu của quý doanh nghiệp.</string>
+    <string name="mixi_phone">0922222222</string>
+    <string name="about_me">Giới thiệu về chúng tôi</string>
+    <string name="rules">Điều khoản và điều kiện</string>
+    <string name="privacy_policy">Chính sách riêng tư</string>
+    <string name="user_manual">Hướng dẫn sử dụng</string>
+    <string name="mixi_email">info@mixivivu.com</string>
     <string-array name="filterCity">
         <item>Bà Rịa</item>
         <item>Bạc Liêu</item>
