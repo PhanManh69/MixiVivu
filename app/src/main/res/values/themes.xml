@@ -169,4 +169,22 @@
         <item name="bottomSheetStyle">@style/DetailRoom</item>
     </style>
 
+    <style name="textContentBlog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:justificationMode">inter_word</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="picContentBlog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">224dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
 </resources>

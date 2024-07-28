@@ -9,7 +9,8 @@ data class BlogModel(
     var date: String = "",
     var intro: String = "",
     var content: ArrayList<String> = ArrayList(),
-    var picList: ArrayList<String> = ArrayList()
+    var picList: ArrayList<String> = ArrayList(),
+    var endContent: String = ""
 ) : Parcelable {
     constructor(parcel: Parcel) : this (
         parcel.readInt(),
@@ -17,7 +18,8 @@ data class BlogModel(
         parcel.readString().toString(),
         parcel.readString().toString(),
         parcel.createStringArrayList() as ArrayList<String>,
-        parcel.createStringArrayList() as ArrayList<String>
+        parcel.createStringArrayList() as ArrayList<String>,
+        parcel.readString().toString()
     )
 
     override fun describeContents(): Int {
@@ -31,6 +33,7 @@ data class BlogModel(
         parcel.writeString(intro)
         parcel.writeStringList(content)
         parcel.writeStringList(picList)
+        parcel.writeString(endContent)
     }
 
     companion object CREATOR : Parcelable.Creator<BlogModel> {

@@ -1,12 +1,14 @@
 package com.emanh.mixivivu.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions
+import com.emanh.mixivivu.activity.DetailBlogActivity
 import com.emanh.mixivivu.databinding.ViewholderBlogBinding
 import com.emanh.mixivivu.model.BlogModel
 
@@ -35,5 +37,11 @@ class BlogAdapter(private val items: MutableList<BlogModel>)
         holder.binding.title.text = items[position].title
         holder.binding.content.text = items[position].intro
         holder.binding.date.text = items[position].date
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, DetailBlogActivity::class.java)
+            intent.putExtra("objectBlog", items[position])
+            holder.itemView.context.startActivity(intent)
+        }
     }
 }
