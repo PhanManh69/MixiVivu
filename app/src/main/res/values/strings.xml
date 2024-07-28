@@ -67,6 +67,8 @@
     <string name="privacy_policy">Chính sách riêng tư</string>
     <string name="user_manual">Hướng dẫn sử dụng</string>
     <string name="mixi_email">info@mixivivu.com</string>
+    <string name="warning">Ứng dụng chỉ là một sản phẩm demo, không có mục địch mạo danh doanh nghiệp</string>
+    <string name="start">Bắt đầu</string>
     <string-array name="filterCity">
         <item>Bà Rịa</item>
         <item>Bạc Liêu</item>

@@ -21,7 +21,7 @@ class IntroActivity : BaseActivity() {
     private fun init() {
         lifecycleScope.launch {
             delay(2000)
-            startActivity(Intent(this@IntroActivity, MainActivity::class.java))
+            startActivity(Intent(this@IntroActivity, WarningActivity::class.java))
             finish()
         }
     }
