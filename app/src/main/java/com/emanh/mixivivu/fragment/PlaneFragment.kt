@@ -11,8 +11,11 @@ import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.emanh.mixivivu.R
+import com.emanh.mixivivu.adapter.FlightAdapter
 import com.emanh.mixivivu.databinding.FragmentPlaneBinding
+import com.emanh.mixivivu.viewModel.PlaneViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -23,6 +26,7 @@ class PlaneFragment : Fragment() {
     private var _binding: FragmentPlaneBinding? = null
 
     private val binding get() = _binding!!
+    private val viewModel = PlaneViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,7 +63,27 @@ class PlaneFragment : Fragment() {
 
         binding.searchPlane.setOnClickListener {
             if (validate()) {
-                searchPlane()
+                initRecyclerView()
+            }
+        }
+    }
+
+    private fun initRecyclerView() {
+        val newStartingPoint = removeText(binding.inputStartingPoint.text.toString())
+        val newDestination = removeText(binding.inputDestination.text.toString())
+
+        viewModel.loadPlane(newStartingPoint, newDestination)
+        binding.progressPlane.visibility = View.VISIBLE
+        viewModel.plane.observe(viewLifecycleOwner) {
+            binding.progressPlane.visibility = View.GONE
+            if (it.isNullOrEmpty()) {
+                binding.noData.visibility = View.VISIBLE
+                binding.listPlane.visibility = View.GONE
+            } else {
+                binding.noData.visibility = View.GONE
+                binding.listPlane.visibility = View.VISIBLE
+                binding.listPlane.layoutManager = LinearLayoutManager(requireContext())
+                binding.listPlane.adapter = FlightAdapter(it)
             }
         }
     }
@@ -150,13 +174,7 @@ class PlaneFragment : Fragment() {
         datePickerDialog.show()
     }
 
-    private fun searchPlane() {
-        binding.progressPlane.visibility = View.VISIBLE
-        binding.noData.visibility = View.GONE
-        lifecycleScope.launch {
-            delay(1000)
-            binding.progressPlane.visibility = View.GONE
-            binding.noData.visibility = View.VISIBLE
-        }
+    private fun removeText(input: String): String {
+        return input.replace(Regex("\\s*\\(.*?\\)\\s*"), "").trim()
     }
 }

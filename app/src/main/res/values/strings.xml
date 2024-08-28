@@ -70,88 +70,28 @@
     <string name="warning">Ứng dụng chỉ là một sản phẩm demo, không có mục địch mạo danh doanh nghiệp</string>
     <string name="start">Bắt đầu</string>
     <string-array name="filterCity">
-        <item>Bà Rịa</item>
-        <item>Bạc Liêu</item>
-        <item>Bảo Lộc</item>
-        <item>Bắc Giang</item>
-        <item>Bắc Kạn</item>
-        <item>Bắc Ninh</item>
-        <item>Bến Tre</item>
-        <item>Biên Hòa</item>
-        <item>Buôn Ma Thuột</item>
-        <item>Cà Mau</item>
-        <item>Cam Ranh</item>
-        <item>Cần Thơ</item>
-        <item>Cao Bằng</item>
-        <item>Cao Lãnh</item>
-        <item>Cẩm Phả</item>
-        <item>Châu Đốc</item>
-        <item>Đà Nẵng</item>
-        <item>Đà Lạt</item>
-        <item>Điện Biên Phủ</item>
-        <item>Đông Hà</item>
-        <item>Đồng Hới</item>
-        <item>Đồng Xoài</item>
-        <item>Hà Giang</item>
-        <item>Hạ Long</item>
-        <item>Hà Nội</item>
-        <item>Hà Tiên</item>
-        <item>Hà Tĩnh</item>
-        <item>Hải Dương</item>
-        <item>Hải Phòng</item>
-        <item>Hòa Bình</item>
-        <item>Hội An</item>
-        <item>Huế</item>
-        <item>Hưng Yên</item>
-        <item>Kon Tum</item>
-        <item>Lai Châu</item>
-        <item>Lạng Sơn</item>
-        <item>Lào Cai</item>
-        <item>Long Xuyên</item>
-        <item>Móng Cái</item>
-        <item>Mỹ Tho</item>
-        <item>Nam Định</item>
-        <item>Nha Trang</item>
-        <item>Ninh Bình</item>
-        <item>Phan Rang - Tháp Chàm</item>
-        <item>Phan Thiết</item>
-        <item>Phủ Lý</item>
-        <item>Phúc Yên</item>
-        <item>Pleiku</item>
-        <item>Quảng Ngãi</item>
-        <item>Quy Nhơn</item>
-        <item>Rạch Giá</item>
-        <item>Sa Đéc</item>
-        <item>Sầm Sơn</item>
-        <item>Sóc Trăng</item>
-        <item>Sơn La</item>
-        <item>Sông Công</item>
-        <item>Tam Điệp</item>
-        <item>Tam Kỳ</item>
-        <item>Tân An</item>
-        <item>Tây Ninh</item>
-        <item>Thái Bình</item>
-        <item>Thái Nguyên</item>
-        <item>Thanh Hóa</item>
-        <item>Thủ Dầu Một</item>
-        <item>Trà Vinh</item>
-        <item>Tuy Hòa</item>
-        <item>Tuyên Quang</item>
-        <item>TP. Hồ Chí Minh</item>
-        <item>Uông Bí</item>
-        <item>Vị Thanh</item>
-        <item>Việt Trì</item>
-        <item>Vinh</item>
-        <item>Vĩnh Long</item>
-        <item>Vĩnh Yên</item>
-        <item>Vũng Tàu</item>
-        <item>Yên Bái</item>
-        <item>Thuận An</item>
-        <item>Dĩ An</item>
-        <item>Phú Quốc</item>
-        <item>Ngã Bảy</item>
-        <item>Long Khánh</item>
-        <item>Hồng Ngự</item>
-        <item>Gia Nghĩa</item>
+        <item>Sân bay Chu Lai (Quảng Nam)</item>
+        <item>Sân bay Thọ Xuân (Thanh Hóa)</item>
+        <item>Sân bay Đồng Hới (Quảng Bình)</item>
+        <item>Sân bay Điện Biên Phủ (Điện Biên)</item>
+        <item>Sân bay Tuy Hòa (Phú Yên)</item>
+        <item>Sân bay Pleiku (Gia Lai)</item>
+        <item>Sân bay Buôn Mê Thuột (Đắk Lắk)</item>
+        <item>Sân bay Rạch Giá (Kiên Giang)</item>
+        <item>Sân bay Cà Mau (Cà Mau)</item>
+        <item>Sân bay Côn Đảo (Bà Rịa – Vũng Tàu)</item>
+        <item>Sân bay Nội Bài (Hà Nội)</item>
+        <item>Sân bay Tân Sơn Nhất (TP. Hồ Chí Minh)</item>
+        <item>Sân bay Phú Quốc (Kiên Giang)</item>
+        <item>Sân bay Đà Nẵng (Đà Nẵng)</item>
+        <item>Sân bay Cam Ranh (Khánh Hòa)</item>
+        <item>Sân bay Phú Bài (Thừa Thiên Huế)</item>
+        <item>Sân bay Vân Đồn (Quảng Ninh)</item>
+        <item>Sân bay Cần Thơ (Cần Thơ)</item>
+        <item>Sân bay Vinh (Nghệ An)</item>
+        <item>Sân bay Phù Cát (Bình Định)</item>
+        <item>Sân bay Cát Bi (Hải Phòng)</item>
+        <item>Sân bay Liên Khương (Lâm Đồng)</item>
+        <item>Sân bay Long Thành (Đồng Nai)</item>
     </string-array>
 </resources>
